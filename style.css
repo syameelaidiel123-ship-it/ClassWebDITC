@@ -1,0 +1,245 @@
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+    min-height: 100vh;
+}
+header {
+    background: linear-gradient(90deg, #6a11cb 60%, #2575fc 100%);
+    color: white;
+    padding: 40px 20px 30px 20px;
+    border-radius: 0 0 40px 40px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+header::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: -10px;
+    height: 20px;
+    background: url('https://svgshare.com/i/13rA.svg') repeat-x;
+    opacity: 0.3;
+}
+header h1 {
+    margin: 0 0 10px 0;
+    font-size: 2.8em;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+}
+header p {
+    font-size: 1.3em;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+}
+section {
+    margin: 40px auto 0 auto;
+    max-width: 1100px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+.card {
+    background: linear-gradient(145deg, #ffffff 60%, #f0f4ff 100%);
+    padding: 30px 25px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    flex: 1 1 260px;
+    min-width: 260px;
+    max-width: 350px;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #e0c3fc;
+}
+.card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+.card h2 {
+    margin-top: 0;
+    color: #2575fc;
+    font-size: 1.5em;
+    border-bottom: 2px solid #e0c3fc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 4px rgba(42, 63, 219, 0.2);
+}
+.card ul {
+    padding-left: 18px;
+    line-height: 1.6;
+}
+.card a {
+    color: #6a11cb;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: bold;
+}
+.card a:hover {
+    color: #2575fc;
+    text-decoration: underline;
+}
+.upload-section {
+    background: linear-gradient(135deg, #f8fafc 60%, #c4e4ff 100%);
+    border: 2px dashed #6a11cb;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    margin-top: 10px;
+    box-shadow: 0 4px 15px rgba(106, 17, 203, 0.08);
+}
+.upload-section input[type="file"] {
+    margin: 15px 0;
+    padding: 8px;
+    border-radius: 10px;
+    border: 1px solid #c4e4ff;
+    background: #fff;
+    width: 90%;
+}
+.upload-section button {
+    background: linear-gradient(90deg, #6a11cb 60%, #2575fc 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 22px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: transform 0.2s;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.upload-section button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+.gallery-section {
+    margin: 60px auto 0 auto;
+    max-width: 1100px;
+    background: linear-gradient(135deg, #8ec5fc 0%, #e0c3fc 100%);
+    border-radius: 28px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    padding: 30px 20px;
+    opacity: 0; /* Initial opacity for AOS animation */
+    transition: opacity 0.8s ease-in-out;
+}
+.gallery-section.aos-animate {
+    opacity: 1;
+}
+.gallery-section h2 {
+    text-align: center;
+    color: #6a11cb;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 10px rgba(106, 17, 203, 0.2);
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+.gallery-item {
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(145deg, #ffffff 60%, #f0f4ff 100%);
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    padding: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+.gallery img {
+    max-width: 140px;
+    max-height: 140px;
+    border-radius: 14px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    object-fit: cover;
+    border: 3px solid #6a11cb;
+    background: #fff;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+.gallery img:hover {
+    border-color: #2575fc;
+}
+.delete-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: linear-gradient(135deg, #2575fc 60%, #6a11cb 100%);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    font-size: 1.2em;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: transform 0.2s;
+}
+.delete-btn:hover {
+    transform: scale(1.1);
+}
+.view-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0; top: 0; width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+}
+.view-modal-content {
+    background: linear-gradient(135deg, #e0c3fc 60%, #8ec5fc 100%);
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+    text-align: center;
+    max-width: 90vw;
+    max-height: 90vh;
+    animation: popin 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+@keyframes popin {
+    0% { transform: scale(0.6); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+.view-modal img {
+    max-width: 80vw;
+    max-height: 70vh;
+    border-radius: 14px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.close-modal-btn {
+    background: linear-gradient(90deg, #2575fc 60%, #6a11cb 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 22px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: transform 0.2s;
+    font-weight: bold;
+}
+.close-modal-btn:hover {
+    transform: translateY(-2px);
+}
+@media (max-width: 900px) {
+    section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .gallery-section {
+        padding: 20px 5px;
+    }
+}

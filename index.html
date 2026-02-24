@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DIT3C Class Website</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Welcome to DIT3C Class Website</h1>
+        <p>Your hub for class updates, resources, and announcements.</p>
+    </header>
+    <section>
+        <div class="card" data-aos="fade-right">
+    <h2>Announcements</h2>
+
+    <ul id="announcementList">
+       
+    </ul>
+
+    <hr>
+
+    <h3>Add Announcement</h3>
+
+    <input type="text" id="announcementInput" placeholder="Write announcement here">
+
+    <button onclick="addAnnouncement()">Post</button>
+
+</div>
+        <div class="card" data-aos="fade-up">
+            <h2>Resources</h2>
+            <ul>
+                <li><a href="#">Course Syllabus</a></li>
+                <li><a href="#">Lecture Notes</a></li>
+                <li><a href="#">Group Chat</a></li>
+            </ul>
+        </div>
+        <div class="card" data-aos="fade-left">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:drfizzune@gmail.com">....@gmail.com</a></p>
+            <p>WhatsApp: <a href="https://wa.me/6016" target="_blank">......</a></p>
+        </div>
+        <div class="card upload-section" data-aos="fade-up">
+            <h2>Class Gallery Uploader</h2>
+            <form id="uploadForm">
+                <label for="imageUpload">Upload a picture or file:</label><br>
+                <input type="file" id="imageUpload" accept="image/*" multiple>
+                <br>
+                <button type="submit">Post</button>
+            </form>
+        </div>
+    </section>
+    <div class="gallery-section" data-aos="fade-up">
+        <h2>Class Gallery</h2>
+        <div class="gallery" id="galleryView"></div>
+    </div>
+    <div class="view-modal" id="viewModal">
+        <div class="view-modal-content" id="viewModalContent">
+            <img id="modalImg" src="" alt="View">
+            <br>
+            <button class="close-modal-btn" id="closeModalBtn">Close</button>
+        </div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
